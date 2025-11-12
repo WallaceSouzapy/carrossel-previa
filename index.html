@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel de Produtos</title>
+    <link rel="stylesheet" href="carousel.css">
+</head>
+<body>
+    <div id="app" class="app-container">
+        <!-- Loading State -->
+        <div id="loading" class="loading-container">
+            <div class="loading-spinner"></div>
+        </div>
+
+        <!-- Main Content -->
+        <div id="mainContent" class="carousel-wrapper" style="display: none;">
+            <div class="carousel-container">
+                <!-- Product Image Section -->
+                <div class="product-image-section">
+                    <div class="image-card" id="imageCard">
+                        <div class="image-glow"></div>
+                        <img 
+                            id="productImage" 
+                            src="" 
+                            alt=""
+                            class="product-image"
+                        />
+                    </div>
+                </div>
+
+                <!-- Product Info Section -->
+                <div class="product-info-section">
+                    <div class="info-content" id="infoContent">
+                        <div class="product-badge" id="productBadge">
+                            Produto 1 de 5
+                        </div>
+                        <h1 class="product-name" id="productName">Nome do Produto</h1>
+                        <p class="product-description" id="productDescription">Descrição do produto</p>
+                        
+                        <!-- Navigation Controls -->
+                        <div class="navigation-controls">
+                            <button 
+                                id="prevButton"
+                                class="nav-button nav-button-prev"
+                                data-testid="carousel-prev-button"
+                                aria-label="Produto anterior"
+                            >
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="15 18 9 12 15 6"></polyline>
+                                </svg>
+                            </button>
+                            
+                            <div class="progress-dots" id="progressDots">
+                                <!-- Dots will be generated dynamically -->
+                            </div>
+
+                            <button 
+                                id="nextButton"
+                                class="nav-button nav-button-next"
+                                data-testid="carousel-next-button"
+                                aria-label="Próximo produto"
+                            >
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Animated Background -->
+        <div class="animated-bg">
+            <div class="bg-circle bg-circle-1"></div>
+            <div class="bg-circle bg-circle-2"></div>
+            <div class="bg-circle bg-circle-3"></div>
+        </div>
+    </div>
+
+    <script src="carousel.js"></script>
+</body>
+</html>
